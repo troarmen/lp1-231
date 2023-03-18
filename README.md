@@ -13,3 +13,8 @@ Repositório destinado aos conteúdos de Linguagem de Programação 1.
 - Semana 03
     - Criação de projetos Java
     - Introdução à Linguagem Java
+- Semana 04
+    - Constantes
+    - Desvios condicionais
+    - Estruturas de repetição
+    - Arrays
