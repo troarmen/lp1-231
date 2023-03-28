@@ -1,5 +1,7 @@
 package semana04;
 
+import semana06.Calculadora;
+
 public class EstruturaControle {
     public static void main(String[] args) {
         //if
@@ -79,7 +81,6 @@ public class EstruturaControle {
         for (double nota : notas) {
             System.out.println(nota);
         }
-        
     }
 
 }
