@@ -34,7 +34,7 @@ public class Ex02 {
                 System.out.println("Você pertence ao grupo de Obesidade Classe 3");
             }
 
-            double pesoIdeal = calcularPesoIdeal(18.5, altura);
+            double pesoIdeal = calcularPesoIdeal(24.9, altura);
             double pesoParaPerder = peso - pesoIdeal;
             System.out.println("Para chegar ao normal, você precisa perder: " + pesoParaPerder);
             scanner.close();
