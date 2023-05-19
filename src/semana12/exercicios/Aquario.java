@@ -1,13 +1,13 @@
 package semana12.exercicios;
 
 public class Aquario {
-    public double comprimento;
     public double altura;
+    public double comprimento;
     public double largura;
     public double temperaturaAmbiente;
     public double temperaturaDesejada;
 
-    public Aquario(double comprimento, double altura, double largura){
+    public Aquario(double altura, double comprimento, double largura){
         this.comprimento = comprimento;
         this.altura = altura;
         this.largura = largura;
