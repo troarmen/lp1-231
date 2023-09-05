@@ -4,7 +4,7 @@ public class Quadrado implements FiguraGeometrica{
     private double lado;
 
     public Quadrado(double lado) {
-        this.lado = lado;
+        setLado(lado);
     }
 
     @Override
@@ -13,9 +13,15 @@ public class Quadrado implements FiguraGeometrica{
     }
 
     @Override
-    public double calularPerimetro() {
+    public double calcularPerimetro() {
         return 4 * lado;
     }
 
+    public void setLado(double lado) {
+        if(lado <= 0.0){
+            throw new RuntimeException("Lado inválido");
+        }
+            this.lado = lado;
     
+    }
 }

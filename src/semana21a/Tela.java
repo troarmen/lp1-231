@@ -3,41 +3,38 @@ package semana21a;
 import java.util.ArrayList;
 
 public class Tela {
-    private int numeroQuadrados;
-    private int numeroRetangulos;
-    private ArrayList<Quadrado> quadrados;
-    private ArrayList<Retangulo> retangulos;
-    
-    public Tela(){
-        numeroQuadrados = 0;
-        numeroRetangulos = 0;
-        quadrados = new ArrayList<>();
-        retangulos = new ArrayList<>();
-    }
-    
-    public void addQuadrado(Quadrado q){
-        quadrados.add(q);
-        numeroQuadrados += 1;
+    private ArrayList<FiguraGeometrica> figuras;
+
+    public Tela() {
+        figuras = new ArrayList<>();
     }
 
-    public void addRetangulo(Retangulo r){
-        retangulos.add(r);
-        numeroRetangulos += 1;
+    public void addFigura(FiguraGeometrica figura) {
+        figuras.add(figura);
     }
 
-    public double areaTotal(){
-        double total = 0.0;
-        for (Quadrado quadrado : quadrados) {
-            total += quadrado.calcularArea();
+    public double areaTotal() {
+        double areaTotal = 0.0;
+
+        for (FiguraGeometrica figura : figuras) {
+            areaTotal += figura.calcularArea();
         }
-        return total;
+
+        return areaTotal;
     }
-              
-    public double perimetroTotal(){
-        double total = 0.0;
-        for (Quadrado quadrado : quadrados) {
-            total += quadrado.calularPerimetro();
+
+    public double perimetroTotal() {
+        double perimetroTotal = 0.0;
+
+        for (FiguraGeometrica figura : figuras) {
+            perimetroTotal += figura.calcularPerimetro();
         }
-        return total;
+
+        return perimetroTotal;
     }
+
+    public int getNumeroFiguras() {
+        return figuras.size();
+    }
+    
 }
