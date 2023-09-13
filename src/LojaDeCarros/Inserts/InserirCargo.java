@@ -1,4 +1,4 @@
-package projeto;
+package LojaDeCarros.Inserts;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,17 +8,17 @@ import java.util.Scanner;
 
 public class InserirCargo {
     public static void main(String[] args) throws SQLException{
-        String url = "jdbc:mysql://localhost/lojadecarros?user=root&password=0000&useSSL=true";
+        String url = "jdbc:mysql://localhost/estudante?user=estudante&password=estudante&useSSL=true";
         Connection conn = DriverManager.getConnection(url);
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite o ID do cargo: ");
+        System.out.println("Digite o ID do cargo a ser inserido: ");
         int id = sc.nextInt();
 
         sc.nextLine();
 
-        System.out.println("Digite o nome: ");
+        System.out.println("Digite o nome do cargo: ");
         String nome = sc.nextLine();
 
         String sql = "INSERT INTO cargo VALUES(?, ?)";
@@ -29,7 +29,6 @@ public class InserirCargo {
 
         pstm.close();
         conn.close();
-
-
+        sc.close();
     }
 }
